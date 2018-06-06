@@ -86,7 +86,7 @@ class Player {
 
    // When the user reaches the water, the user is reset to the starting position
       if (this.y < 0) {
-        setTimeout(function () {
+        setTimeout(() => {
           this.x = 202;
           this.y = 405;
         }, 300);
@@ -102,7 +102,7 @@ const enemyLocation = [60, 145, 230];
 
 // The starting location and the speed for each enemy before randomly regenerated
 enemyLocation.forEach(function(locationY) {
-  enemy = new Enemy(0, locationY, 200);
+  const enemy = new Enemy(0, locationY, 200);
   allEnemies.push(enemy);
 });
 
